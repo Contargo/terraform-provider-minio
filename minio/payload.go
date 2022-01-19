@@ -1,19 +1,23 @@
 package minio
 
 import (
+	"github.com/minio/madmin-go"
 	minio "github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/set"
-	"github.com/minio/minio/pkg/madmin"
 )
 
 //S3MinioConfig defines variable for minio
 type S3MinioConfig struct {
-	S3HostPort     string
-	S3UserAccess   string
-	S3UserSecret   string
-	S3Region       string
-	S3APISignature string
-	S3SSL          bool
+	S3HostPort      string
+	S3UserAccess    string
+	S3UserSecret    string
+	S3Region        string
+	S3APISignature  string
+	S3SSL           bool
+	S3SSLCACertFile string
+	S3SSLCertFile   string
+	S3SSLKeyFile    string
+	S3SSLSkipVerify bool
 }
 
 //S3MinioClient defines default minio

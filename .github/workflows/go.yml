@@ -20,19 +20,19 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v2
       - name: Run fmt
-        uses: aminueza/go-github-action/fmt@master
+        uses: aminueza/go-github-action/fmt@b6f194ea5e095630f1ed3ee456c4af61baff7a59
       - name: Run sec
-        uses: aminueza/go-github-action/sec@master
+        uses: aminueza/go-github-action/sec@b6f194ea5e095630f1ed3ee456c4af61baff7a59
         with:
           path: minio/...
       - name: Run vet
-        uses: aminueza/go-github-action/vet@master
+        uses: aminueza/go-github-action/vet@b6f194ea5e095630f1ed3ee456c4af61baff7a59
       - name: Run errcheck
-        uses: aminueza/go-github-action/errcheck@master
+        uses: aminueza/go-github-action/errcheck@b6f194ea5e095630f1ed3ee456c4af61baff7a59
         with:
           path: minio/...
       - name: Run linter
-        uses: aminueza/go-github-action/lint@master
+        uses: aminueza/go-github-action/lint@b6f194ea5e095630f1ed3ee456c4af61baff7a59
       - name: Set up Go 
         uses: actions/setup-go@v1
         with:
